@@ -1,10 +1,11 @@
 <?xml version='1.0'?>
 
 <robot name="gopigo3" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <link name='world'/>
+  <!-- <link name='world'/> -->
+
+  <link name='odom'/>
 
   <link name='base_link'>
-    <pose>0 0 0.1 0 0 0</pose>
 
     <inertial>
       <mass value="15.0"/>
@@ -154,10 +155,16 @@
 
 
   <!-- Joints -->
-  <joint type="floating" name="world_to_base">
-    <parent link="base_link"/>
-    <child link=""/>
+  <!-- <joint type="floating" name="world_to_odom">
+    <parent link="world"/>
+    <child link="odom"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint> -->
+  
+  <joint type="floating" name="odom_to_base">
+    <parent link="odom"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 -0.036" rpy="0 0 0"/>
   </joint>
 
   <joint type="continuous" name="left_wheel_hinge">
@@ -186,21 +193,10 @@
     <parent link="base_link"/>
   </joint>
 
-  <joint type="continuous" name="body_to_lidar">
-    <origin xyz="0.01 0 0.0476" rpy=" 0 0 0"/>
-    <parent link="gopigo3_body"/>
+  <joint type="fixed" name="base_to_lidar">
+    <origin xyz="0.03 0 0.1126" rpy=" 0 0 0"/>
+    <parent link="base_link"/>
     <child link="lidar"/>
-    <axis xyz="0 0 1" rpy="0 0 0"/>
-    <limit effort="10000" velocity="1000"/>
-    <joint_properties damping="1.0" friction="1.0"/>
-  </joint>
-
-  <sick_lms1xx_mount prefix="base"/>
-  <sick_lms1xx frame="base_laser" topic="scan"/>
-  <joint name="laser_mount_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 0" />
-    <parent link="lidar" />
-    <child link="base_laser_mount" />
   </joint>
 
 </robot>

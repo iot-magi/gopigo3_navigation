@@ -11,8 +11,8 @@
   </node>
 
   <node name="diff_tf" pkg="differential_drive" type="diff_tf.py">
-    <param name="odom_frame_id" value="base_link"/>
-    <param name="base_frame_id" value="world"/>
+    <param name="odom_frame_id" value="odom"/>
+    <param name="base_frame_id" value="base_link"/>
   </node>
 
 </launch>
