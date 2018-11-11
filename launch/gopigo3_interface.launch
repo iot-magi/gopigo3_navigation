@@ -1,0 +1,18 @@
+<launch>
+
+  <node name="f2i_left" pkg="float64_to_int16" type="float64_to_int16_driver.py">
+    <remap from="float64" to="float64/left" />
+    <remap from="int16" to="lwheel" />
+  </node>
+
+  <node name="f2i_right" pkg="float64_to_int16" type="float64_to_int16_driver.py">
+    <remap from="float64" to="float64/right" />
+    <remap from="int16" to="rwheel" />
+  </node>
+
+  <node name="diff_tf" pkg="differential_drive" type="diff_tf.py">
+    <param name="odom_frame_id" value="base_link"/>
+    <param name="base_frame_id" value="world"/>
+  </node>
+
+</launch>
