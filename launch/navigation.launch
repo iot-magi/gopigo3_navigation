@@ -1,9 +1,11 @@
 <launch>
 
+  <!-- Map Server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find gopigo3_navigation)/map/gopigo3_map.yaml"/>
+
   <!-- Amcl -->
   <arg name="use_map_topic" default="true"/>
   <arg name="scan_topic" default="scan" />
-
   <node pkg="amcl" type="amcl" name="amcl">
     <param name="use_map_topic" value="$(arg use_map_topic)"/>
     <!-- Publish scans from best pose at a max of 10 Hz -->
