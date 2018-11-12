@@ -4,6 +4,7 @@
   <node name="gopigo3_node" pkg="gopigo3_node" type="gopigo3_driver.py" output="screen" >
     <remap from="motor/encoder/left" to="float64/left" />
     <remap from="motor/encoder/right" to="float64/right" />
+    <remap from="/odometry" to="odom" />
   </node>
 
   <node name="ydlidar_node"  pkg="ydlidar"  type="ydlidar_node" output="screen" >
