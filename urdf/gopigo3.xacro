@@ -1,7 +1,8 @@
 <?xml version='1.0'?>
 
 <robot name="gopigo3" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <!-- <link name='world'/> -->
+  <!-- <link name='map'>
+  </link> -->
 
   <link name='odom'/>
 
@@ -155,8 +156,8 @@
 
 
   <!-- Joints -->
-  <!-- <joint type="floating" name="world_to_odom">
-    <parent link="world"/>
+  <!-- <joint type="floating" name="map_to_odom">
+    <parent link="map"/>
     <child link="odom"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint> -->
