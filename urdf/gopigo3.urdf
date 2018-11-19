@@ -4,7 +4,8 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="gopigo3" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <!-- <link name='world'/> -->
+  <!-- <link name='map'>
+  </link> -->
   <link name="odom"/>
   <link name="base_link">
     <inertial>
@@ -126,8 +127,8 @@
     </inertial>
   </link>
   <!-- Joints -->
-  <!-- <joint type="floating" name="world_to_odom">
-    <parent link="world"/>
+  <!-- <joint type="floating" name="map_to_odom">
+    <parent link="map"/>
     <child link="odom"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint> -->
