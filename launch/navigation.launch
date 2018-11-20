@@ -1,7 +1,17 @@
 <launch>
 
+  <!-- State Publisher -->
+  <arg name="model" default="$(find gopigo3_navigation)/urdf/gopigo3.urdf"/>
+  <arg name="gui" default="true"/>
+  <param name="robot_description" textfile="$(arg model)"/>
+  <param name="use_gui" value="$(arg gui)"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+
   <!-- Map Server -->
   <!--<node name="map_server" pkg="map_server" type="map_server" args="$(find gopigo3_navigation)/map/gopigo3_map.yaml"/> -->
+
 
   <!-- Amcl -->
   <arg name="use_map_topic" default="true"/>
@@ -91,8 +101,8 @@
 
     <!-- global costmap with laser, for odom_navigation_demo -->
     <rosparam file="$(find gopigo3_navigation)/config/costmap_global_laser.yaml" command="load" ns="global_costmap" if="$(arg no_static_map)"/>
-    <param name="global_costmap/width" value="8.0" if="$(arg no_static_map)"/>
-    <param name="global_costmap/height" value="5.0" if="$(arg no_static_map)"/>
+    <param name="global_costmap/width" value="10.0" if="$(arg no_static_map)"/>
+    <param name="global_costmap/height" value="10.0" if="$(arg no_static_map)"/>
   </node>
 
 
