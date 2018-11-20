@@ -4,6 +4,6 @@
   <!-- <include file="$(find gopigo3_navigation)/launch/navigation2.launch" /> -->
 
   <!-- Rviz -->
-  <include file="$(find gopigo3_navigation/launch/gopigo3_view.launch" />
+  <include file="$(find gopigo3_navigation)/launch/gopigo3_view.launch" />
   <!-- <include file="$(find gopigo3_navigation/launch/gopigo3_view2.launch" /> -->
 </launch>
