@@ -1,13 +1,14 @@
 
 <launch>
-  
-  <node name="gopigo3_node" pkg="gopigo3_node" type="gopigo3_driver.py" output="screen" >
+  <machine name="gopigo3" address="gopigo3" user="pi" password="gopigo"/>
+ 
+  <node machine="gopigo3" name="gopigo3_node" pkg="gopigo3_node" type="gopigo3_driver.py" output="screen" >
     <remap from="motor/encoder/left" to="float64/left" />
     <remap from="motor/encoder/right" to="float64/right" />
     <remap from="/odometry" to="odom" />
   </node>
 
-  <node name="ydlidar_node"  pkg="ydlidar"  type="ydlidar_node" output="screen" >
+  <node machine="gopigo3" name="ydlidar_node"  pkg="ydlidar"  type="ydlidar_node" output="screen" >
     <param name="port"         type="string" value="/dev/ydlidar"/>  
     <param name="baudrate"     type="int"    value="115200"/>
     <param name="frame_id"     type="string" value="lidar"/>
