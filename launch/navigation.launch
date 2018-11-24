@@ -2,7 +2,7 @@
 
   <!-- State Publisher -->
   <arg name="model" default="$(find gopigo3_navigation)/urdf/gopigo3.urdf"/>
-  <arg name="gui" default="true"/>
+  <arg name="gui" default="false"/>
   <param name="robot_description" textfile="$(arg model)"/>
   <param name="use_gui" value="$(arg gui)"/>
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
