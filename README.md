@@ -45,39 +45,39 @@ Operating System Requirement
 ## Result
 Robot
 
-<center>
+<div align="center">
   <img src="images/IMG_0706.JPG" width="300">
-</center>
+</div>
 
 Run Result
 
-<center>
+<div align="center">
   <!-- <img src="images/navigation_real2.gif" width="300"> -->
   <!-- <img src="images/navigation_rviz2.gif" width="300"> -->
-</center>
+</div>
 
 # Hardware setup
 ##  Setup GoPiGo3  
 
 ##  Add power supply circuit  
 Battery -> dc-dc converter -> USB Hub power socket  
-<center>
+<div align="center">
   <img src="images/S__10698770.jpg" width="220">
   <img src="images/S__10698768.jpg" width="220">
   <img src="images/S__10698766.jpg" width="180">
-</center>
+</div>
 
 ##  Set up USB connection  
 Lidar -> serial-USB converter board (comes with Lidar)  -> USB Hub -> Raspberry Pi  
-<center>
+<div align="center">
   <img src="images/S__10698759.jpg" width="300">
-</center>
+</div>
 
 ##  Mount Lidar unit to GoPiGo3  
 
-<center>
+<div align="center">
   <img src="images/S__10698756.jpg" width="300">
-</center>
+</div>
 
 # Notebook PC setup
 Install ROS to Note book PC
