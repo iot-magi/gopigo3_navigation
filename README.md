@@ -36,7 +36,7 @@ Hardware requirement
 -  self power USB hub  
 -  11.1V LiPo battery (not mandatory, original dry cell battery can be used)
 
-<center><img src="images/S__10698773.jpg" width="400"></center>
+<div align="center"><img src="images/S__10698773.jpg" width="400"></div>
 
 Operating System Requirement
 -  OS : Ubuntu 16.04 (Xenial) for Notebook PC
@@ -70,13 +70,13 @@ Battery -> dc-dc converter -> USB Hub power socket
 ##  Set up USB connection  
 Lidar -> serial-USB converter board (comes with Lidar)  -> USB Hub -> Raspberry Pi  
 <center>
-  <img src="images/S__10698759.JPG" width="300">
+  <img src="images/S__10698759.jpg" width="300">
 </center>
 
 ##  Mount Lidar unit to GoPiGo3  
 
 <center>
-  <img src="images/S__10698756.JPG" width="300">
+  <img src="images/S__10698756.jpg" width="300">
 </center>
 
 # Notebook PC setup
