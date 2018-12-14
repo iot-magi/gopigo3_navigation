@@ -36,7 +36,7 @@ Hardware requirement
 -  self power USB hub  
 -  11.1V LiPo battery (not mandatory, original dry cell battery can be used)
 
-<center><img src="gopigo3_navigation_github/まとめ/S__10698773.jpg" width="400"></center>
+<center><img src="images/S__10698773.jpg" width="400"></center>
 
 Operating System Requirement
 -  OS : Ubuntu 16.04 (Xenial) for Notebook PC
@@ -46,14 +46,14 @@ Operating System Requirement
 Robot
 
 <center>
-  <img src="gopigo3_navigation_github/まとめ/IMG_0706.JPG" width="300">
+  <img src="images/IMG_0706.JPG" width="300">
 </center>
 
 Run Result
 
 <center>
-  <!-- <img src="gopigo3_navigation_github/まとめ/navigation_real2.gif" width="300"> -->
-  <!-- <img src="gopigo3_navigation_github/まとめ/navigation_rviz2.gif" width="300"> -->
+  <!-- <img src="images/navigation_real2.gif" width="300"> -->
+  <!-- <img src="images/navigation_rviz2.gif" width="300"> -->
 </center>
 
 # Hardware setup
@@ -62,21 +62,21 @@ Run Result
 ##  Add power supply circuit  
 Battery -> dc-dc converter -> USB Hub power socket  
 <center>
-  <img src="gopigo3_navigation_github/まとめ/S__10698770.jpg" width="220">
-  <img src="gopigo3_navigation_github/まとめ/S__10698768.jpg" width="220">
-  <img src="gopigo3_navigation_github/まとめ/S__10698766.jpg" width="180">
+  <img src="images/S__10698770.jpg" width="220">
+  <img src="images/S__10698768.jpg" width="220">
+  <img src="images/S__10698766.jpg" width="180">
 </center>
 
 ##  Set up USB connection  
 Lidar -> serial-USB converter board (comes with Lidar)  -> USB Hub -> Raspberry Pi  
 <center>
-  <img src="gopigo3_navigation_github/まとめ/S__10698759.JPG" width="300">
+  <img src="images/S__10698759.JPG" width="300">
 </center>
 
 ##  Mount Lidar unit to GoPiGo3  
 
 <center>
-  <img src="gopigo3_navigation_github/まとめ/S__10698756.JPG" width="300">
+  <img src="images/S__10698756.JPG" width="300">
 </center>
 
 # Notebook PC setup
