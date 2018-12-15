@@ -52,8 +52,7 @@ Robot
 Run Result
 
 <div align="center">
-  <!-- <img src="images/navigation_real2.gif" width="300"> -->
-  <!-- <img src="images/navigation_rviz2.gif" width="300"> -->
+  <img src="images/gopigo3_rviz_real.gif" width="700">
 </div>
 
 # Hardware setup
@@ -103,6 +102,7 @@ Make Workspace to Notebook PC
 
 ### ROS network configuration of Notebook PC
 
+    export ROS_MASTER_URI=http://<IP Adress of Notebook PC>:11311
     export ROS_IP=<IP Adress of Notebook PC>
 
 ### Install Packages to Notebook PC
@@ -161,7 +161,7 @@ Make Workspace on GoPiGo3
 
 ## ROS network configuration of GoPiGo3 
 
-    export ROS_MASTER_URI=http://<IP Adress of GoPiGo3>:11311
+    export ROS_MASTER_URI=http://<IP Adress of Notebook PC>:11311
     export ROS_IP=<IP Adress of GoPiGo3>
 
 ### Install gopigo3_node to GoPiGO3
@@ -175,8 +175,8 @@ rerwite gopigo3_driver.py
 
     # gopigo3_node/src/gopigo3_driver.py
 
-    line 259  「gopigo」 -> 「base_link」
-    line 259   「world」 -> 「odom」    
+    line 259  gopigo -> base_link
+    line 259   world -> odom    
 
 ### Setup ydlidar package to GoPiGo3
 
