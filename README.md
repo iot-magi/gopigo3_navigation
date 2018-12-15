@@ -52,7 +52,7 @@ Robot
 Run Result
 
 <div align="center">
-  <img src="images/gopigo3_rviz_real.gif" width="700">
+  <img src="images/gopigo3_rviz_real(cut).gif" width="700">
 </div>
 
 # Hardware setup
