@@ -199,6 +199,7 @@ Install ydlidar driver
     sudo sh initenv.sh
 
 Install gopigo3_controller
+※Please see [gopigo3_controller](https://gitlab.t-lab.cs.teu.ac.jp/MAGI/gopigo3_controller) for more informagiton.
 
     cd ~/catkin/src/
     git clone https://github.com/taityo/gopigo3_controller.git
