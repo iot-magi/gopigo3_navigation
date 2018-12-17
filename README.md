@@ -232,11 +232,11 @@ ntp configration
     roslaunch gopigo3_controller gopigo3.launch
 
 ## Run gopigo3_navigation on Notebook PC
-if you use rviz, you use under command
+If you want to use rviz, you run under command.
 
     roslaunch gopigo3_navigation navigation_view.launch
 
-if you don't use rviz and you use navigation stack from program, you use under command
+If you want to run navigation stack by program, you run under command
 
     roslaunch gopigo3_navigation navigation.launch
 
