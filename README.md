@@ -57,6 +57,11 @@ Run Result
 
 # Hardware setup
 ##  Setup GoPiGo3  
+Assenble GoPiGo3 from parts
+
+<div align="center">
+  <img src="images/S__10911746.jpg" width="300">
+</div>
 
 ##  Add power supply circuit  
 Battery -> dc-dc converter -> USB Hub power socket  
@@ -218,7 +223,7 @@ ntp configration
 
     server (server name) iburst
 
-# Run Gopigo3 Navigation
+# Execution method
 
 ## Run gopigo3_controller on GoPiGo3
 
