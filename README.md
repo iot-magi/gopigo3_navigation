@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # How to run ROS navigation for gopigo3
 ## Introduction
 
