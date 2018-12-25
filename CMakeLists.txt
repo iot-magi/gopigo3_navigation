@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(gopigo3-navigation)
+project(gopigo3_navigation)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -112,7 +112,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES gopigo3-navigation
+#  LIBRARIES gopigo3_navigation
 #  CATKIN_DEPENDS amcl differential_drive float64_to_int16 gmapping gopigo3_node map_server move_base roscpp rospy std_msgs ydlidar
 #  DEPENDS system_lib
 )
@@ -130,7 +130,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/gopigo3-navigation.cpp
+#   src/${PROJECT_NAME}/gopigo3_navigation.cpp
 # )
 
 ## Add cmake target dependencies of the library
