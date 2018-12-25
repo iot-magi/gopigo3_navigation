@@ -244,7 +244,3 @@ If you want to run navigation stack by program, you can run under command
 
 Copyright (c) 2018, Tokyo Univercity of Technology
 
-=======
-# gopigo3_navigation
-Lidar based ROS navigation for GoPiGo3
->>>>>>> magi/master
