@@ -96,7 +96,7 @@ Install ROS to Note book PC
     source ~/.bashrc
     sudo apt-get install python-rosinstall
 
-Make Workspace to Notebook PC
+Create Catkin Workspace on Notebook PC
 
     mkdir -p ~/catkin_ws/src  
     cd ~/catkin_ws/src  
@@ -105,12 +105,12 @@ Make Workspace to Notebook PC
     catkin_make  
     source devel/setup.bash
 
-### ROS network configuration of Notebook PC
+### ROS network configuration for Notebook PC
 
     export ROS_MASTER_URI=http://<IP Adress of Notebook PC>:11311
     export ROS_IP=<IP Adress of Notebook PC>
 
-### Install Packages to Notebook PC
+### Install ROS Packages to Notebook PC
 
     sudo apt-get install ros-kinetic-navigation
     sudo apt-get install ros-kinetic-gmapping
@@ -120,7 +120,7 @@ Install gopigo3_navigation package
     cd ~/catkin/src/
     git clone https://github.com/taityo/gopigo3_navigation.git    
 
-### ROS Package Build on Notebook PC
+### Build ROS Package on Notebook PC
 
     cd ~/catkin/
     catkin make
@@ -224,20 +224,20 @@ ntp configration
 
     server (server name) iburst
 
-# Execution method
+# Execution
 
 ## Run gopigo3_navigation on Notebook PC
-If you want to use rviz, you run under command.
+If you want to use rviz, you can run under command.
 
     roslaunch gopigo3_navigation navigation_view.launch
 
-If you want to run navigation stack by program, you run under command
+If you want to run navigation stack by program, you can run under command
 
     roslaunch gopigo3_navigation navigation.launch
 
 ## Run gopigo3_controller on GoPiGo3
 
-※This launch file run both gopigo3_driver.py and ydlidar.launch
+※This launch file should be ran both gopigo3_driver.py and ydlidar.launch
 
     roslaunch gopigo3_controller gopigo3.launch
 
@@ -246,3 +246,4 @@ If you want to run navigation stack by program, you run under command
 ![BSD](http://img.shields.io/badge/license-BSD-green.svg)
 
 Copyright (c) 2018, Tokyo Univercity of Technology
+
