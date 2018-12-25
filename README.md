@@ -237,7 +237,7 @@ If you want to run navigation stack by program, you can run under command
 
 ## Run gopigo3_controller on GoPiGo3
 
-※This launch file should be ran both gopigo3_driver.py and ydlidar.launch
+※This launch file should be run both gopigo3_driver.py and ydlidar.launch
 
     roslaunch gopigo3_controller gopigo3.launch
 
