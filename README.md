@@ -195,12 +195,6 @@ Install ydlidar driver
     sudo chmod 777 ./*
     sudo sh initenv.sh
 
-Install gopigo3_controller  
-※Please see [gopigo3_controller](https://gitlab.t-lab.cs.teu.ac.jp/MAGI/gopigo3_controller) for more informagiton.
-
-    cd ~/catkin/src/
-    git clone https://github.com/taityo/gopigo3_controller.git
-
 ### ROS Package Build on GoPiGo3
 
     cd ~/catkin/
@@ -232,11 +226,10 @@ If you want to run navigation stack by program, you can run the following comman
 
     roslaunch gopigo3_navigation navigation.launch
 
-## Run gopigo3_controller on GoPiGo3
+## Run gopigo3_driver.py and ydlidar.launch on GoPiGo3
 
-※This launch file should be run both gopigo3_driver.py and ydlidar.launch
-
-    roslaunch gopigo3_controller gopigo3.launch
+    rosrun gopigo3_node gopigo3_driver.py
+    roslaunch ydlidar ydlidar.launch
 
 # License
 
