@@ -241,4 +241,10 @@ If you want to run navigation stack by program, you run under command
 
     roslaunch gopigo3_controller gopigo3.launch
 
+## License
 
+![BSD](http://img.shields.io/badge/license-BSD-green.svg)
+
+Copyright (c) 2018, Tokyo Univercity of Technology
+
+License-check is open source software under the [BSD license](https://github.com/open-rdc/icart_mini_ros_pkgs/blob/master/LICENSE).
