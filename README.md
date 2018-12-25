@@ -226,7 +226,7 @@ If you want to run navigation stack by program, you can run the following comman
 
     roslaunch gopigo3_navigation navigation.launch
 
-## Run gopigo3_driver.py and ydlidar.launch on GoPiGo3
+## Run gopigo3.launch and ydlidar.launch on GoPiGo3
 
     roslaunch gopigo3_node gopigo3.launch
 
