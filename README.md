@@ -1,4 +1,4 @@
-# How to run ROS navigation for gopigo3
+# How to run ROS navigation stack on gopigo3
 ## Introduction
 
 This repository explains the way to mount a low price lidar on GoPiGo3 and run navigation stack with the GoPiGo3.
@@ -224,11 +224,11 @@ ntp configration
 # Execution
 
 ## Run gopigo3_navigation on Notebook PC
-If you want to use rviz, you can run under command.
+If you want to use rviz, you can run the following command.
 
     roslaunch gopigo3_navigation navigation_view.launch
 
-If you want to run navigation stack by program, you can run under command
+If you want to run navigation stack by program, you can run the following command.
 
     roslaunch gopigo3_navigation navigation.launch
 
