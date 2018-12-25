@@ -1,10 +1,7 @@
 # How to run ROS navigation for gopigo3
 ## Introduction
 
-We succeeded in creating a robot that can be used Navigation stack at a low price by mounting a low price ydlidar on GoPiGo3.
-This makes it easy for anyone to get a navigate robot easily at about 300 dollars.
-Here, we describe a method for using navigation stack on GoPiGo 3
-When setting up according to the following description, you can move the robot to the specified position while avoiding obstacles just by specifying the goal by rviz or the program.
+This repository explains the way to mount a low price lidar on GoPiGo3 and run navigation stack with the GoPiGo3.
 
 ## Setup instructions
 1. Hardware setup
