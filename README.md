@@ -226,12 +226,6 @@ ntp configration
 
 # Execution method
 
-## Run gopigo3_controller on GoPiGo3
-
-※This launch file run both gopigo3_driver.py and ydlidar.launch
-
-    roslaunch gopigo3_controller gopigo3.launch
-
 ## Run gopigo3_navigation on Notebook PC
 If you want to use rviz, you run under command.
 
@@ -240,4 +234,11 @@ If you want to use rviz, you run under command.
 If you want to run navigation stack by program, you run under command
 
     roslaunch gopigo3_navigation navigation.launch
+
+## Run gopigo3_controller on GoPiGo3
+
+※This launch file run both gopigo3_driver.py and ydlidar.launch
+
+    roslaunch gopigo3_controller gopigo3.launch
+
 
