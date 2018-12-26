@@ -1,7 +1,7 @@
 # How to run ROS navigation stack on [gopigo3](https://www.dexterindustries.com/gopigo3/)
 ## Introduction
 
-This repository explains the way to mount a low price lidar on [GoPiGo3](https://www.dexterindustries.com/gopigo3/) and run navigation stack with the GoPiGo3.
+This repository explains the way to mount a low cost lidar sensor on [GoPiGo3](https://www.dexterindustries.com/gopigo3/) and run the ROS navigation stack with it.
 
 ## Setup instructions
 1. Hardware setup
