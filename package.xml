@@ -50,38 +50,26 @@
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>amcl</build_depend>
-  <build_depend>differential_drive</build_depend>
-  <build_depend>float64_to_int16</build_depend>
   <build_depend>gmapping</build_depend>
-  <build_depend>gopigo3_node</build_depend>
   <build_depend>map_server</build_depend>
   <build_depend>move_base</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>rospy</build_depend>
   <build_depend>std_msgs</build_depend>
-  <build_depend>ydlidar</build_depend>
   <build_export_depend>amcl</build_export_depend>
-  <build_export_depend>differential_drive</build_export_depend>
-  <build_export_depend>float64_to_int16</build_export_depend>
   <build_export_depend>gmapping</build_export_depend>
-  <build_export_depend>gopigo3_node</build_export_depend>
   <build_export_depend>map_server</build_export_depend>
   <build_export_depend>move_base</build_export_depend>
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>rospy</build_export_depend>
   <build_export_depend>std_msgs</build_export_depend>
-  <build_export_depend>ydlidar</build_export_depend>
   <exec_depend>amcl</exec_depend>
-  <exec_depend>differential_drive</exec_depend>
-  <exec_depend>float64_to_int16</exec_depend>
   <exec_depend>gmapping</exec_depend>
-  <exec_depend>gopigo3_node</exec_depend>
   <exec_depend>map_server</exec_depend>
   <exec_depend>move_base</exec_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
-  <exec_depend>ydlidar</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

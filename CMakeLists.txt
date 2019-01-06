@@ -9,16 +9,12 @@ project(gopigo3_navigation)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   amcl
-  differential_drive
-  float64_to_int16
   gmapping
-  gopigo3_node
   map_server
   move_base
   roscpp
   rospy
   std_msgs
-  ydlidar
 )
 
 ## System dependencies are found with CMake's conventions
@@ -113,7 +109,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES gopigo3_navigation
-#  CATKIN_DEPENDS amcl differential_drive float64_to_int16 gmapping gopigo3_node map_server move_base roscpp rospy std_msgs ydlidar
+#  CATKIN_DEPENDS amcl gmapping map_server move_base roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
