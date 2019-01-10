@@ -121,7 +121,7 @@ Install gopigo3_navigation package
 ### Build ROS Package on Notebook PC
 
     cd ~/catkin/
-    catkin make
+    catkin_make
 
 ### NTP setup on Notebook PC
 Install ntp
@@ -265,7 +265,7 @@ Run gopigo3_node
 
     roslaunch gopigo3_node gopigo3.launch
 
-Run ydlidar
+Run ydlidar  
 Note: Run this launchfile on another terminal.
 
     roslaunch ydlidar nav_lidar.launch
