@@ -1,4 +1,4 @@
-# How to run ROS navigation stack on [gopigo3](https://www.dexterindustries.com/gopigo3/)
+# How to run ROS navigation stack on [GoPiGo3](https://www.dexterindustries.com/gopigo3/)
 ## Introduction
 
 This repository explains the way to mount a low cost lidar sensor on [GoPiGo3](https://www.dexterindustries.com/gopigo3/) and run the ROS navigation stack with it.
@@ -100,7 +100,8 @@ Create Catkin Workspace on Notebook PC
     catkin_init_workspace  
     cd ~/catkin_ws/  
     catkin_make  
-    source devel/setup.bash
+    echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
 
 ### ROS network configuration for Notebook PC
 
@@ -115,7 +116,7 @@ Create Catkin Workspace on Notebook PC
 Install gopigo3_navigation package
 
     cd ~/catkin/src/
-    git clone https://github.com/taityo/gopigo3_navigation.git    
+    git clone https://github.com/iot-magi/gopigo3_navigation.git
 
 ### Build ROS Package on Notebook PC
 
@@ -159,7 +160,8 @@ Make Workspace on GoPiGo3
     catkin_init_workspace  
     cd ~/catkin_ws/  
     catkin_make  
-    source devel/setup.bash
+    echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
 
 ## ROS network configuration of GoPiGo3 
 
@@ -168,7 +170,7 @@ Make Workspace on GoPiGo3
 
 ### Install gopigo3_node to GoPiGO3
 
-※Please see [gopigo3_node](https://github.com/ros-gopigo/gopigo3_node) for more informagiton.
+Note: Please see [gopigo3_node](https://github.com/ros-gopigo/gopigo3_node) for more informagiton.
 
     cd ~/catkin/src/
     git clone https://github.com/ros-gopigo/gopigo3_node.git
@@ -177,12 +179,13 @@ rerwite gopigo3_driver.py
 
     # gopigo3_node/src/gopigo3_driver.py
 
-    line 259  gopigo -> base_link
-    line 259   world -> odom    
+    line 106 "odometry" -> "odom"
+    line 259    world -> odom    
+    line 259 gopigo -> base_link
 
 ### Setup ydlidar package to GoPiGo3
 
-※Please see [ydlidar](https://github.com/EAIBOT/ydlidar) for more informagiton.
+Note: Please see [ydlidar](https://github.com/EAIBOT/ydlidar) for more informagiton.
 
     # ydlidar package clone
     cd ~/catkin/src/
@@ -191,9 +194,32 @@ rerwite gopigo3_driver.py
 Install ydlidar driver
 
     # ydliar driver setup
-    roscd ydlidar/startup
+    cd ydlidar/startup
     sudo chmod 777 ./*
     sudo sh initenv.sh
+
+Make nav_lidar.launch
+
+    # ydlidar/launch/nav_lidar.launch
+
+    <launch>
+      <node name="ydlidar_node"  pkg="ydlidar"  type="ydlidar_node" output="screen" respawn="false" >
+        <param name="port"         type="string" value="/dev/ydlidar"/>  
+        <param name="baudrate"     type="int"    value="115200"/>
+        <param name="frame_id"     type="string" value="lidar"/>
+        <param name="low_exposure"  type="bool"   value="false"/>
+        <param name="resolution_fixed"    type="bool"   value="true"/>
+        <param name="auto_reconnect"    type="bool"   value="true"/>
+        <param name="reversion"    type="bool"   value="false"/>
+        <param name="angle_min"    type="double" value="-180" />
+        <param name="angle_max"    type="double" value="180" />
+        <param name="range_min"    type="double" value="0.1" />
+        <param name="range_max"    type="double" value="16.0" />
+        <param name="ignore_array" type="string" value="" />
+        <param name="samp_rate"    type="int"    value="9"/>
+        <param name="frequency"    type="double" value="7"/>
+      </node>
+    </launch>
 
 ### ROS Package Build on GoPiGo3
 
@@ -201,6 +227,14 @@ Install ydlidar driver
     catkin make
 
 ### NTP setup on GoPiGo3
+
+Install ntpdate
+
+    sudo apt-get install ntpdate
+
+Run ntpdate
+
+    ntpdate (server name)
 
 Install ntp
 
@@ -226,11 +260,15 @@ If you want to run navigation stack by program, you can run the following comman
 
     roslaunch gopigo3_navigation navigation.launch
 
-## Run gopigo3.launch and ydlidar.launch on GoPiGo3
+## Run launchfile on GoPiGo3
+Run gopigo3_node
 
     roslaunch gopigo3_node gopigo3.launch
 
-    roslaunch ydlidar ydlidar.launch
+Run ydlidar
+Note: Run this launchfile on another terminal.
+
+    roslaunch ydlidar nav_lidar.launch
 
 # License
 
