@@ -224,7 +224,7 @@ Make nav_lidar.launch
 ### ROS Package Build on GoPiGo3
 
     cd ~/catkin/
-    catkin make
+    catkin_make
 
 ### NTP setup on GoPiGo3
 
