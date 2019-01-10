@@ -260,13 +260,13 @@ If you want to run navigation stack by program, you can run the following comman
 
     roslaunch gopigo3_navigation navigation.launch
 
-## Run launchfile on GoPiGo3
+## Run launch file on GoPiGo3
 Run gopigo3_node
 
     roslaunch gopigo3_node gopigo3.launch
 
 Run ydlidar  
-Note: Run this launchfile on another terminal.
+Note: Run this launch file on another terminal.
 
     roslaunch ydlidar nav_lidar.launch
 
